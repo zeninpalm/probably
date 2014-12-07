@@ -1,8 +1,8 @@
-module Andand #:nodoc:
+module Probably#:nodoc:
   module VERSION #:nodoc:
-    MAJOR = 1
-    MINOR = 3
-    TINY  = 3
+    MAJOR = 0
+    MINOR = 1
+    TINY  = 0
 
     STRING = [MAJOR, MINOR, TINY].join('.')
   end
