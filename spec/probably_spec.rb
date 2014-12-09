@@ -14,10 +14,18 @@ describe Probably, "Basic Behaviour" do
 
     expect("test string".probably.split.count.or(1)).to eq 2
     expect("internationalization".probably.split('n').count.or(1)).to eq 4
+
+    expect(15.probably.succ.or(10).pred).to eq 15
+    expect([1, 2, 3].probably.reduce(0) {|sum, i| sum = sum + i }.or(17)).to eq 6
   end
 
   it "returns 'or' value when nil occurs in the calls chain" do
     expect(nil.probably.succ.succ.or(5)).to eq 5
     expect(nil.probably.split.count.or(0)).to eq 0
+  end
+
+  it "return 'or' value when exception occurs" do
+    expect(15.probably.split.or(12)).to eq 12
+    expect(false.probably.succ.or(true)).to eq true
   end
 end

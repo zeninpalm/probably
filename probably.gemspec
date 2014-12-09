@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
              "lib/probably.rb",
              "lib/probably/version.rb"]
   s.test_files = [
-      "test/probably_spec.rb",
-      "test/test_helper.rb"]
+      "spec/probably_spec.rb",
+      "spec/spec_helper.rb"]
   s.rdoc_options = ["--main", "README.textile"]
   s.extra_rdoc_files = ["History.txt", "README.textile"]
 end

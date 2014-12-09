@@ -2,6 +2,7 @@ source "https://ruby.taobao.org"
 
 gemspec
 gem "rake"
+gem "pry"
 
 group :test do
   gem "rspec", "~> 2.13"

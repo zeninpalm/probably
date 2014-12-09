@@ -3,17 +3,24 @@ class DelayedInvocation
     @target = target
     @methods = []
     @args = []
+    @blocks = []
   end
 
-  def method_missing(name, *args)
+  def method_missing(name, *args, &block)
     @methods << name
     @args << args
+    @blocks << (block.nil? ? nil : block)
     self
   end
 
   def or(value)
     @methods.reduce(@target) do |t, m|
-      t.send(m, *(@args.shift))
+      block = @blocks.shift
+      unless block.nil?
+        t.__send__(m, *(@args.shift), &block)
+      else
+        t.__send__(m, *(@args.shift))
+      end
     end
   rescue
     value
