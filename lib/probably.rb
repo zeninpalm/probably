@@ -3,7 +3,7 @@ $:.unshift File.dirname(__FILE__)
 require 'probably/delayed_invocation'
 
 module Probably
-  def probably
-    DelayedInvocation.new(self)
+  def probably(target = nil)
+    DelayedInvocation.new(target || self)
   end
 end
