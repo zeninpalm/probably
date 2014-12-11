@@ -16,16 +16,19 @@ probably(visitors).most_recent.last.first_name.or("NoSuchAnUser")
 
 Install
 ===============
-
+```ruby
 gem install probably
+```
 
 or in your Gemfile:
-
+```ruby
 gem "probably"
+```
 
 or like this
-
+```ruby
 gem "probably", :git => "git://github.com/zeninpalm/probably.git"
+```
 
 Usage
 ================
