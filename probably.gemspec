@@ -9,7 +9,8 @@ Gem::Specification.new do |s|
   s.files = [ "License.txt",
              "README.md",
              "lib/probably.rb",
-             "lib/probably/version.rb"]
+             "lib/probably/version.rb",
+            "lib/probably/delayed_invocation.rb"]
   s.test_files = [
       "spec/probably_spec.rb",
       "spec/spec_helper.rb"]
