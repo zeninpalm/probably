@@ -14,9 +14,21 @@ or in a more natural way:
 probably(visitors).most_recent.last.first_name.or("NoSuchAnUser")
 ```
 
+Install
+===============
+
+gem install probably
+
+or in your Gemfile:
+
+gem "probably"
+
+or like this
+
+gem "probably", :git => "git://github.com/zeninpalm/probably.git"
 
 Usage
-_____
+================
 
 The simplest scenario
 
