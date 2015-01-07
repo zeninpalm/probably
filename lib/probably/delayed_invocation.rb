@@ -23,7 +23,11 @@ class DelayedInvocation
       end
     end
   rescue
-    value
+    if block_given?
+      yield
+    else
+      value
+    end
   end
 end
 
