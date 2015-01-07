@@ -47,5 +47,17 @@ end
 
 end
 ```
+or
+
+```ruby
+class Foo
+  include Probably
+  
+  def bar
+    probably(nil).some_message.or { 5 / 0 }
+  end
+end
+```
+
 you many want to check probably_spec.rb for more examples, they are quite simple and intutive!
 
