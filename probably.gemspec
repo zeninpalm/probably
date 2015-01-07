@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "probably"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
   s.summary = "Enables you to chain calls without explicitly checking nils or exceptions"
   s.email = "yiwei.in.cyber@gmail.com"
   s.homepage = "http://github.com/zeninpalm/probably/"
